@@ -1,4 +1,4 @@
-# Projeto (Mock) em construção
+# Projeto (Mock) em construção (pipeline)
 
 Informações LBC
 
