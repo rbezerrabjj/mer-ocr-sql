@@ -26,3 +26,28 @@ Informações LBC
     - Airflow
     - TicAPP (Sharepoint da AMA)
     - Confluence
+
+# ########################################################################################
+
+# MER OCR to SQL Script
+
+Este projeto converte imagens contendo **modelos de dados relacionais (MER)** em comandos SQL compatíveis com o **MySQL Workbench**, utilizando **OCR com Tesseract**.
+
+## 📷 Exemplo de entrada
+
+Uma imagem contendo o modelo de dados com tabelas, campos e tipos (como JPEG, PNG etc).
+
+## ⚙️ Tecnologias utilizadas
+
+- Python 3
+- OpenCV
+- Pytesseract
+- Tesseract OCR Engine
+
+## 🚀 Como usar
+
+### 1. Instale o Tesseract OCR
+
+Baixe e instale o [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) e adicione ao PATH.  
+Exemplo de caminho no Windows:
+
