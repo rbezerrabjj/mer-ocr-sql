@@ -1,5 +1,5 @@
 # Commit de teste para disparar workflow
-
+# Teste 2
 name: Terraform Deploy
 
 on:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest# Teste 2
     env:
       ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
       ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
