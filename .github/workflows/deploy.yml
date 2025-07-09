@@ -8,11 +8,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     env:
-      ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
-      ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
-      ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
-      ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
-      TF_VAR_admin_password: ${{ secrets.ADMIN_PASSWORD }}
+      ARM_CLIENT_ID: "00000000-0000-0000-0000-000000000000"       # substitua pelos seus valores reais
+      ARM_CLIENT_SECRET: "fake-secret"
+      ARM_SUBSCRIPTION_ID: "11111111-1111-1111-1111-111111111111"
+      ARM_TENANT_ID: "22222222-2222-2222-2222-222222222222"
+      TF_VAR_admin_password: "Lbc@123"                            # sua senha para o terraform
 
     steps:
       - name: Checkout code
@@ -23,11 +23,10 @@ jobs:
 
       - name: Check env variables
         run: |
-          echo "ARM_CLIENT_ID set? ${ARM_CLIENT_ID:+✅ YES}"
-          echo "ARM_CLIENT_SECRET set? ${ARM_CLIENT_SECRET:+✅ YES}"
-          echo "ARM_SUBSCRIPTION_ID set? ${ARM_SUBSCRIPTION_ID:+✅ YES}"
-          echo "ARM_TENANT_ID set? ${ARM_TENANT_ID:+✅ YES}"
-          echo "TF_VAR_admin_password set? ${TF_VAR_admin_password:+✅ YES}"
+          echo "ARM_CLIENT_ID: $ARM_CLIENT_ID"
+          echo "ARM_CLIENT_SECRET: $ARM_CLIENT_SECRET"
+          echo "ARM_SUBSCRIPTION_ID: $ARM_SUBSCRIPTION_ID"
+          echo "ARM_TENANT_ID: $ARM_TENANT_ID"
 
       - name: Terraform Init
         run: terraform init
@@ -36,5 +35,3 @@ jobs:
       - name: Terraform Apply
         run: terraform apply -auto-approve
         working-directory: terraform
-
-# Teste 2
