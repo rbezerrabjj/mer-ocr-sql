@@ -25,4 +25,14 @@ jobs:
         run: |
           echo "ARM_CLIENT_ID set? ${ARM_CLIENT_ID:+✅ YES}"
           echo "ARM_CLIENT_SECRET set? ${ARM_CLIENT_SECRET:+✅ YES}"
-          echo "ARM_SUBSCRIPTION_ID set? ${ARM_S_
+          echo "ARM_SUBSCRIPTION_ID set? ${ARM_SUBSCRIPTION_ID:+✅ YES}"
+          echo "ARM_TENANT_ID set? ${ARM_TENANT_ID:+✅ YES}"
+          echo "TF_VAR_admin_password set? ${TF_VAR_admin_password:+✅ YES}"
+
+      - name: Terraform Init
+        run: terraform init
+        working-directory: terraform
+
+      - name: Terraform Apply
+        run: terraform apply -auto-approve
+        working-directory: terraform
