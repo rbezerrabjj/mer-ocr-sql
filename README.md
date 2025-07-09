@@ -1,3 +1,5 @@
+# Projeto (Mock) em construção
+
 Informações LBC
 
 1. Pedro Lima (Partner LBC / Gestor de Projetos AMA - https://www.ama.gov.pt/ - Agencia para Modernização Administrativa - Portal de entidade pública) 
@@ -50,4 +52,3 @@ Uma imagem contendo o modelo de dados com tabelas, campos e tipos (como JPEG, PN
 
 Baixe e instale o [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) e adicione ao PATH.  
 Exemplo de caminho no Windows:
-
