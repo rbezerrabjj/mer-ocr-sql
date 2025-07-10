@@ -1,5 +1,5 @@
 # Projeto (Mock) em construção (pipeline)
-# Com testes
+# Com testes variados
 
 Informações LBC
 
